@@ -34,7 +34,7 @@ The coordinator program has one command-line parameter, namely, the configuratio
 When the coordinator starts up, the multicast group is assumed to be empty. Participants join the group through register messages. When the coordinator gets a message from a participant, it first parses the message, acknowledges the receipt of the message, closes the connection and then performs the requested action. For example, if it receives a “register” message, it will add the participant to the member list. If it receives a multicast message, it will send the message to the members that are currently online. If any members are offline, it will store the message for providing persistence.
 
 Execution:
-—————
+---------
 The project is developed using Eclipse. The participant and coordinator config files are in their respective bin directories.
 - To execute the coordinator instance, goto coordinator’s bin directory and run ‘java com.ds.coordinator.Coordinator PP3-coordinator-conf.txt’
 - To execute the participant instance, goto participant’s bin directory and run ‘java com.ds.participant.Participant PP3-participant-conf.txt’
